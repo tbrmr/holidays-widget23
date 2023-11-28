@@ -18,7 +18,7 @@ Popup widget with information about holidays.
     ',						        //текст внутри виджета
     bgColor= 'rgba(0,0,0,0)', //цвет фона круга, rgba с нулями - для прозрачности
      widgetPosition = "left", //варианты left/right, по умолчанию right
-    icon = '<img src="ball.png">'; //иконка, если выбран вариант custom
+    icon = '<pre><img src="ball.png"></pre>'; //иконка, если выбран вариант custom
     
 let holidays = new Holidays(
             typeHoliday,
