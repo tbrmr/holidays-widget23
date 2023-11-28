@@ -12,6 +12,12 @@
     background: #fff;
 }
 
+._left {
+    right:unset;
+    left: calc(45px + 50px);
+    flex-direction: row-reverse;
+}
+
 .__banner-holidays-btn span {
     display: flex;
 }
@@ -26,6 +32,14 @@
     transition: transform .4s cubic-bezier(0.30, 2.40, 0.85, 2.50);
 }
 
+.__banner-holidays-btn._left .__banner-holidays-btn__arrow {
+    transform: rotateY(180deg);
+}
+
+.__banner-holidays-btn._left .__banner-holidays-btn__arrow._rotate {
+    transform: unset;
+}
+
 .__banner-holidays-btn .__banner-holidays-btn__arrow._rotate {
     transform: rotateY(180deg);
     transition: transform .4s ease;
@@ -38,6 +52,11 @@
     transition: max-width .4s ease, padding-left .4s cubic-bezier(0.30, 2.40, 0.85, 2.50), opacity .4s ease;
     white-space: nowrap;
     cursor: pointer;
+}
+
+.__banner-holidays-btn._left .__banner-holidays-btn__text {
+    padding-left: 30px;
+    padding-right: 15px;
 }
 
 .__banner-holidays-btn .__banner-holidays-btn__text._hide {
@@ -59,7 +78,12 @@
     cursor: pointer;
 }
 
-.__banner-holidays-btn .__banner-holidays-btn__img svg {
+.__banner-holidays-btn._left .__banner-holidays-btn__img {
+    right: unset;
+    left:-45px;
+}
+
+.__banner-holidays-btn .__banner-holidays-btn__img .__img {
     width: 74px;
     height: 74px;
     position: absolute;
@@ -69,7 +93,16 @@
     transition: transform .4s ease;
 }
 
-.__banner-holidays-btn .__banner-holidays-btn__img svg:hover {
+.__banner-holidays-btn._left .__banner-holidays-btn__img .__img {
+    transform: rotate(-18deg);
+}
+
+.__banner-holidays-btn._left:hover .__banner-holidays-btn__img .__img {
+    transform: rotate(18deg);
+    transition: transform .4s ease;
+}
+
+.__banner-holidays-btn:hover .__banner-holidays-btn__img .__img {
     transform: rotate(-18deg);
     transition: transform .4s ease;
 }
